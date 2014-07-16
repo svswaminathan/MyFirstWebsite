@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="rashmi">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rashmi Hospital</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/css/offcanvas.css" rel="stylesheet">
+    <script src="jquery/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/offcanvas.js"></script>
+    <script src="angular/angular.min.js"></script>
+    <script src="angular/angular-route.js"></script>
+    <script src="app/app.js"></script>
+    <!--controllers>-->
+    <script src="app/controllers/home-controller.js"></script>
+    
+</head>
+<body>
+        <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#/home">Rashmi Hospital</a>
+            </div>
+            <div class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="#/about">About</a></li>
+                <li><a href="#/consultants">Consultants</a></li>
+                <li><a href="#/facilities">Facilities</a></li>
+                <li><a href="#/location">Location</a></li>
+              </ul>
+            </div><!-- /.nav-collapse -->
+        </div><!-- /.navbar -->
+
+        <div class="container">
+            <div class="row row-offcanvas row-offcanvas-right">
+                <div class="col-xs-12 col-sm-9">
+                  <p class="pull-right visible-xs">
+                    <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">More...</button>
+                  </p>
+                  <div class="jumbotron">
+                        <h1>Rashmi Hospital</h1>
+                        <p>Centre for Minimally Invasive Surgery & Maternity
+                        <address>166 9th Cross Indiranagar 1st Stage Bangalore 38<br/>
+                                 Tel: 2525 1573/2525 1139 Fax: 2520 0447<br/>
+                                 <a href="mailto:info@rashminursinghome.com" target="">info@rashminursinghome.com</a>
+                        </address>
+                        </p>
+                  </div> 
+                  <div id="content">
+                      <div>
+                        <ng-view></ng-view>
+                      </div>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item">Cashless Admissions</a>
+                    <a href="#" class="list-group-item">Guidelines for patients</a>
+                    <a href="#" class="list-group-item">Credits & Disclaimer</a>
+                    <!-- <a href="#" class="list-group-item">Link</a>
+                    <a href="#" class="list-group-item">Link</a>
+                    <a href="#" class="list-group-item">Link</a>
+                    <a href="#" class="list-group-item">Link</a>
+                    <a href="#" class="list-group-item">Link</a>
+                    <a href="#" class="list-group-item">Link</a>
+                    <a href="#" class="list-group-item">Link</a> -->
+                  </div> <!--/list-group -->
+                </div> <!--/sidebar -->
+            
+        </div> <!-- /container -->
+        <footer>
+                    <p>&copy; SPARS 2014</p>
+        </footer>
+</body>
+</html>
