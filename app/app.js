@@ -1,5 +1,5 @@
 'use strict';
-var rashmi = angular.module('rashmi', ['ngRoute'])
+var rashmi = angular.module('rashmi', ['ngRoute', 'ui.bootstrap'])
 .config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/home', {
         templateUrl: 'app/templates/home.html',
@@ -20,6 +20,14 @@ var rashmi = angular.module('rashmi', ['ngRoute'])
     $routeProvider.when('/location', {
         templateUrl: 'app/templates/location.html',
         controller: 'about'
+    });
+    $routeProvider.when('/gallery', {
+        templateUrl: 'app/templates/gallery.html',
+        controller: 'gallery'
+    });
+    $routeProvider.when('/ent', {
+        templateUrl: 'app/templates/ent.html',
+        controller: 'ent'
     });
     $routeProvider.otherwise({ redirectTo: '/home' });
 }]);
